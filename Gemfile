@@ -7,6 +7,10 @@ gem 'rails', '3.0.9'
 
 gem 'sqlite3'
 
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+end
 # Use unicorn as the web server
 # gem 'unicorn'
 
