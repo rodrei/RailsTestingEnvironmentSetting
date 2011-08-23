@@ -6,11 +6,32 @@ gem 'rails', '3.0.9'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'haml'
+
+group :development do
+  gem 'irbtools', :require => 'irbtools/configure'
+end
 
 group :test, :development do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'guard-rspec'
+  gem "capybara"
+  gem 'rb-inotify'
+  gem 'libnotify'
+  gem 'timecop'
+
+  group :data_factory do
+    gem 'factory_girl_rails'
+    gem 'forgery', '0.3.6'
+  end
+
 end
+
+group :support do
+  gem 'annotate'
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
